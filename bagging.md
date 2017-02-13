@@ -1,44 +1,44 @@
 # Baggers
 
 ## What do Baggers do?
-Baggers do some quality assurance on the dataset to make sure the content is correct and corresponds to what was described in the spreadsheet. Then they package the data into a bagit file (or "bag"), which includes basic technical metadata and upload it to final DataRefuge destination.
+Baggers do some quality assurance on the dataset to make sure the content is correct and corresponds to what was described in the spreadsheet. Then they package the data into a bagit file (or "bag"), which includes the harvested data and basic technical metadata. The bagger the uploads it to the final DataRefuge destination.
 
 ## Getting set up as a Bagger
-- Skills recommended for this role: in general, Baggers need to have some tech skills and a good understanding of harvesting goals.
-- Apply to become a Bagger 
-   - By filling out [this form](https://docs.google.com/a/temple.edu/forms/d/e/1FAIpQLSfh9YIFnDrc-Cuc0hTd-U37J3D8xw8K7VXmzWkPs6Y5Q0wfVg/viewform) 
+- Skills recommended for this role: in general, Baggers need to have some tech skills (familiarity with BASH/command line is necessary) and a good understanding of harvesting goals.
+- Apply to become a Bagger
+   - By filling out [this form](https://docs.google.com/a/temple.edu/forms/d/e/1FAIpQLSfh9YIFnDrc-Cuc0hTd-U37J3D8xw8K7VXmzWkPs6Y5Q0wfVg/viewform)
     - Note that an email address is required to apply.
     - Note also that you should be willing to have your real name be associated with the datasets, to follow archival best practices (see [guidelines on archival best practices for Data Refuge](http://www.ppehlab.org/blogposts/2017/2/1/data-refuge-rests-on-a-clear-chain-of-custody) for more information).
 - The organizers of the event (in-person or remote) will send you an invite to the [Archivers app](http://www.archivers.space/), which helps us coordinate all the data archiving work we do.
 	- Click the invite link, and choose a user name and a password.    
 - Make sure you have an account on the DataRefuge slack where people share expertise and answer each other's questions.
-	- Ask your event organizer to send you an invite 
-- Get set up with Python and the Python script to make a bag at the command line https://github.com/LibraryOfCongress/bagit-python
+	- Ask your event organizer to send you an invite
+- You will need to install and set up two pieces of software for the bagging process
+  - Download and install the [Data Conservancy Package](https://github.com/DataConservancy/dcs-packaging-tool/releases) tool, which you will use for the majority of the bagging process.
+  - Get set up with Python and the Python script to make a bag at the command line https://github.com/LibraryOfCongress/bagit-python
 - If you need any assistance:
   - Talk to your DataRescue Guide if you are at an in-person event
-  - Or post questions on Slack in the #Baggers channel.
-  
-  
-## Note: URL vs UUID
-The `URL` is the link to examine, and the `UUID` is a canonical ID we'll use to connect the url with the data in question. The UUID will have been generated already by the DataRefuge organizers. UUID stands for Universal Unique Identifier. 
+  - Post questions on Slack in the #Baggers channel if you are working remotely.
 
-  
+
+## Note: URL vs UUID
+The `URL` is the link to examine, and the `UUID` is a canonical ID we'll use to connect the url with the data in question. The UUID will have been generated already by the DataRefuge organizers. UUID stands for Universal Unique Identifier.
+
+
 ## Claiming a dataset for bagging
 - You will work on datasets that were harvested by Checkers.
 - Go to the [Archivers app](http://www.archivers.space/), click `URLS` and then `BAG`: all the URLs listed are ready to be bagged
     - Available URLs are the ones that have not been checked out by someone else, that is, that do not have someone's name in the User column.
-- Select an available URL and click its UUID to get to the detailed view, then click `Check out this URL`. It is now ready for you to work on, and no one else can do anything to it while you have it checked out. 
+- Select an available URL and click its UUID to get to the detailed view, then click `Check out this URL`. It is now ready for you to work on, and no one else can do anything to it while you have it checked out.
 - While you go through the harvesting process, make sure to report as much information as possible in the Archivers app, as this is the place were we collectively keep track of all the work done.
 
 ## Note: URL vs UUID
-The `URL` is the link to examine and harvest, and the `UUID` is a canonical ID we use to connect the url with the data in question. The UUID will have been generated earlier earlier in the process. UUID stands for Universal Unique Identifier. 
-
-**Note: the next few steps below need to be reviewed in light of the new app-driven workflow** 
+The `URL` is the link to examine and harvest, and the `UUID` is a canonical ID we use to connect the url with the data in question. The UUID will have been generated earlier earlier in the process. UUID stands for Universal Unique Identifier.
 
 ## Downloading & opening the dataset
-  - Go to the URL containing the zipped dataset (provided in cell "URL from upload of zip") 
-  - Download the zip file to your laptop, and unzip it.
-  - Quality assurance: spot check to ensure the UUID and downloaded materials match to the spreadsheet row
+  - Go to the URL containing the zipped dataset (provided in the "Bag" section and underneath "Harvest URL/Location")
+  - Download the zip file to your computer, and unzip it.
+  - Quality assurance: spot check to ensure the UUID and downloaded materials match to the contents listed in the dataset's "Info" section on the Archivers App.
 
 - Confirm content of Json file
   - The json should match the information from the Harvester and use the following format:
@@ -64,35 +64,47 @@ The `URL` is the link to examine and harvest, and the `UUID` is a canonical ID w
   - If you make any changes, make sure to save this as a .json file.
   - Confirm that the json file is within the package with the dataset(s)
 
-- Creating the bag
-  - Run python command line script which creates the bag
+##Creating the Bag
+  - Open Data Conservancy Package (DCP) tool
+  - Make sure ``"DCS Business Profile"`` is selected in the upper right part of the screen
+  - Fill out Required Fields
+    - 'Name of bag' will be the dataset's UUID
+    - 'Contact Name' is the name of the bagger
+    - 'Contact email' is the email address of the bagger    
+    - **Please note, to ensure proper chain of custody, we need people to use their real names and email addresses.**
+  - After completing these fields, choose ``"Save and Next"``. This will prompt you to save a "DCP" file, which will allow you to return to this package if you want to change/add information about the bag later or create the bag with different formatting options. (More on this below.)
+  - After saving the DCP file, choose ``"Browse"`` under ``"Select a Content Directory"``.
+  - Navigate to the directory you want to bag. Once the directory is loaded, choose "Next".
+  - A screen will pop up saying "Creating Package Tree + Directories"
+  - When finished, you should a see a screen that lists out the files that will go into the bag. "Unassigned" files are artifacts of the operating system and can be ignored.
+  If everything looks good, click on ``"Save & Next"``
+  - Under packaging options, choose the following options:
+    - Archive Format: zip
+    - Compression Format: none (default for zip)
+    - Graph serialization format: Turtle [Confirm]
+    - Checksum algorithm: MD5
+  - Click on ``"Choose Directory"`` to tell DCP where to save the finished bag. A screen should pop up that will say "Generating Package".
+  - When DCP is finished bagging the folder, it will offer the choice to create another version of the package in a different format (using different options listed above). This is not necessary, so choose ``"No, Thanks"``.
+  - Locate the .zip file of the finished bag.
+  - Open a shell or Terminal prompt.
+  - Run the following command:  
+      ``bagit.py --validate [path to finished bag]``
+  - If it comes back as "valid" you can proceed to the next step of uploading the bag.
+    - If it does not validate, please go back over your process above. If you are confident you followed all the steps and it still does not validate, please notify a DataRescue guide or report it in the DataRescue Slack channel.
 
-  ```
-  bagit.py --contact-name '[your name]' /directory/to/bag
-  ```
-
-  - You should be left with a 'data' folder (which contains the downloaded content and metadata file) and four separate bagit files
-    - bag-info.txt
-    - bagit.txt
-    - manifest-md5.txt
-    - tagmanifest-md5.txt
-
-## Creating the Zip file and uploading it
-  - Zip this entire collection (data folder and bagit files) and confirm that it is named with the row's UUID
-  - Upload the zipped bag using the application http://drp-upload-bagger.herokuapp.com/
-    - Make sure to select the name of your event in the dropdown (and "remote" if you are working remotely)
-    - Note that files beyond 5 Gigs cannot be uploaded through this method
-      - Please talk to your DataRescue guide/post on Slack in Baggers channel, if you have a larger file
-  - Enter URL in cell "Bag URL" in Uncrawlable spreadsheet
-    - The application will return the location URL for your zip file. 
-    - The syntax will be "[UrlStub]/[UUID].zip
-  - Enter file size in cell "Size of bag"
+##Uploading the Finished Bag  
+- Upload the zipped bag using the application http://drp-upload-bagger.herokuapp.com/
+  - Make sure to select the name of your event in the dropdown (or "remote" if you are working remotely)
+  - Note that files beyond 5 Gigs cannot be uploaded through this method
+    - Please talk to your DataRescue guide/post on Slack in Baggers channel if you have a larger file
 
 ## Quality assurance and finishing up
-- To ensure that the bag was uploaded successfully, go to the URL and download the bag back to your laptop.
-- Unzip it, open it and spot check to make sure that the bag looks well formed and the files seem valid.
+- To ensure that the bag was uploaded successfully, go to the URL generated by the Uploader app and download the bag back to your laptop.
+- Unzip it and run the same command as above:  
+    ``bagit.py --validate [path to finished bag]``
+    - If it does not validate, please notify a DataRescue guide or report it in the DataRescue Slack channel.
 
 - In the Archivers app, make sure to fill out as much information as possible to document your work.
-- Check the Bag checkbox (on the right-hand side) to mark that step as completed. 
+- Check the Bag checkbox (on the right-hand side) to mark that step as completed.
 - Click `Save`.
-- Click `Check in URL`, to release it and allow someone else to work on the next step. 
+- Click `Check in URL`, to release it and allow someone else to work on the next step.
