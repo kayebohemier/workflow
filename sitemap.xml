@@ -12,6 +12,22 @@
     
         
     <url>
+     <loc>/nhv-logistics/</loc>
+     <lastmod>2017-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/self-sort/</loc>
+     <lastmod>2017-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/seeding/</loc>
      <lastmod>2017-03-03</lastmod>
      <changefreq>daily</changefreq>
