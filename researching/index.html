@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Researching - DataRescueNHV @ Yale Workflow</title>
+  <title>Researching - DataRescue Workflow</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> DataRescueNHV @ Yale Workflow</a>
+        <a href=".." class="icon icon-home"> DataRescue Workflow</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -55,34 +55,27 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../logistics-procedures/">New Haven-Specific</a>
+    <ul class="subnav">
+    <li><span>Website Archiving</span></li>
+
         
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../self-sorting/">Which Path to Choose</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../advance-work/">Advance Work</a>
-        
-    </li>
-<li>
-          
-            <li>
+            
     <li class="toctree-l1 ">
         <a class="" href="../seeding/">Seeding</a>
         
     </li>
+
+        
+        
+    </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Archiving More Complex Datasets</span></li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">Researching</a>
         
@@ -111,27 +104,54 @@
             </ul>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../harvesting/">Harvesting</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../bagging/">Checking/Bagging</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../describing/">Describing</a>
         
     </li>
+
+        
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Event Organizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../organizing/pre-event/">Before an Event</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../organizing/post-event/">After an Event</a>
+        
+    </li>
+
+        
+        
+    </ul>
 <li>
           
             <li>
@@ -146,13 +166,14 @@
     </li>
 
         
-
-        <li class="toctree-l1">
-            <a class="" href="https://youtu.be/tvSSILnHnpA" target="_blank">Archivers App Walkthrough</a>
-        </li>
-        <li class="toctree-l1">
-            <a class="" href="https://drive.google.com/file/d/0B8Gv3Zy5ceY3X0xiSlV2dnhMYWc/view" target="_blank">Crawlable or Uncrawlable Poster</a>
-        </li>
+        
+          <li class="toctree-l1">
+              <a class="" href="https://youtu.be/tvSSILnHnpA" target="_blank">Archivers App Walkthrough</a>
+          </li>
+          <li class="toctree-l1">
+              <a class="" href="https://drive.google.com/file/d/0B8Gv3Zy5ceY3X0xiSlV2dnhMYWc/view" target="_blank">Crawlable or Uncrawlable Poster</a>
+          </li>
+        
     </ul>
 <li>
           
@@ -166,7 +187,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">DataRescueNHV @ Yale Workflow</a>
+        <a href="..">DataRescue Workflow</a>
       </nav>
 
       
@@ -176,6 +197,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="..">Docs</a> &raquo;</li>
     
+      
+        
+          <li>Archiving More Complex Datasets &raquo;</li>
+        
       
     
     <li>Researching</li>
@@ -205,7 +230,7 @@
 <li>Create an account on the DataRefuge Slack using this <a href="https://rauchg-slackin-qonsfhhvxs.now.sh/">slack-in</a> or use the Slack team recommended by your event organizers. This is where people share expertise and answer each other's questions.</li>
 <li>If you need any assistance:<ul>
 <li>Talk to your DataRescue guide if you are at an in-person event</li>
-<li>Or post questions on Slack in the <code>#general</code> channel (or other channel recommended by your event organizers).</li>
+<li>Or post questions in the DataRefuge Slack <code>#researchers</code> channel (or other channel recommended by your event organizers).</li>
 </ul>
 </li>
 </ul>
@@ -255,16 +280,15 @@ If links are added by JavaScript or require submitting a form, they are not craw
 <li>The crawler does not tolerate web frames (but it is straightforward to inspect a page to obtain the content in the frame directly, and then nominate <em>that</em>).</li>
 <li>The crawler recently added the ability to crawl FTP, but we will not rely on this; we will treat resources served over FTP as uncrawlable.</li>
 </ul>
-<p><strong>YES:</strong></p>
+<h4 id="yes">YES</h4>
 <p>If the URL is crawlable or you locate a crawlable URL that accesses the underlying dataset:</p>
 <ul>
 <li>Nominate it using the <a href="https://chrome.google.com/webstore/detail/nominationtool/abjpihafglmijnkkoppbookfkkanklok">EDGI Nomination Chrome Extension</a>.</li>
 <li>Click the <code>Do not harvest</code> checkbox in the Research section in the Archivers app.</li>
 <li>Click <code>Checkin this URL</code> and move on to another URL.</li>
 </ul>
-<p><strong>NO:</strong></p>
-<p>If it is confirmed not crawlable:
-<!-- Why don't we ask that any more? - Fill out the cell "Can it be crawled?" = "no" in Researcher section of the spreadsheet--></p>
+<h4 id="no">NO</h4>
+<p>If it is confirmed not crawlable:</p>
 <ul>
 <li>Search agency websites and data.gov for dataset entry points for your dataset collection.<ul>
 <li>Tips: Try to understand what datasets are underlying the web pages. Look for related entries in the Archivers app, and ensure that you aren't harvesting a subdirectory if you can harvest the entire directory. Often, data underlying dozens of pages or multiple "access portal" apps is also available as one structured data file.</li>
@@ -274,13 +298,17 @@ If links are added by JavaScript or require submitting a form, they are not craw
 <li>Fill out all of the fields in the Research section to the best of your ability.</li>
 <li>Occasionally, URL's will have been nominated separately, but are actually different interfaces built on the same dataset. We want to scrape all of this data and do it exactly one time. The <code>Link URL</code> field lets you search for associated URLs; add any URLs that should be grouped into a single record.</li>
 </ul>
-<p><strong>YES and NO:</strong></p>
+<h4 id="yes-and-no">YES and NO</h4>
 <p>For example, FTP address, mixed content, big data sets:
 <!--  - Fill out the cell "Can it be crawled?" = "yes & no" in Researcher section of the spreadsheet--></p>
 <ul>
 <li>Nominate it anyway, but also follow the steps for uncrawlable content above.</li>
 <li><em>While we understand that this may result in some dataset duplication, this is not a concern. We are ensuring that the data is fully preserved and accessible.</em></li>
 </ul>
+<div class = "attention">
+  <strong>See FAQ <a href="faq/#17-what-is-the-difference-between-crawlable-and-harvested">"What is the difference between Crawlable and Harvested in Archivers.space?"</a></strong>
+</div>
+
 <h2 id="finishing-up">Finishing Up</h2>
 <ul>
 <li>In the Archivers app, make sure to fill out as much information as possible to document your work.</li>
